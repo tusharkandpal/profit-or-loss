@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+#heading {
+    color: white;
+    background-color: darkblue;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+#container {
+    text-align: center;
+    min-width: 400px;
+    margin: 2rem auto;
+}
+
+label {
+    display: block;
+    margin: 1rem;
+}
+
+#find-btn {
+    background-color: darkblue;
+    color: white;
+    padding: 0.2rem 1rem;
+    border-color: transparent;
+    border-radius: 0.5rem;
+}
+
+#output {
+    margin: 2rem 0;
+    padding: 0.5rem;
+    font-weight: 800;
+}
