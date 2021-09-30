@@ -10,24 +10,29 @@ function getInputValues() {
     let quantity = Number(stocksQuantity.value);
     let current = Number(currentPrice.value);
 
-    calculateProfitandLoss(initial, quantity, current);
-
+    if (initial && quantity && current)
+    {
+        calculateProfitandLoss(initial, quantity, current);
+    }
+    else
+    output.innerText = 'Please enter all the values!';
 
 }
 
 function calculateProfitandLoss(initial, quantity, current) {
+    let totalCostPrice = initial*quantity;
 
     if (initial < current)
     {
         let gain = (current - initial) * quantity;
-        let gainPercentage = (gain/initial) * 100;
+        let gainPercentage = (gain/totalCostPrice) * 100;
         body.style.backgroundColor = 'lightgreen';
         output.innerText = `your gain is Rs. ${gain} & gain% is ${gainPercentage.toFixed(2)}%`;
     }
     else if (initial > current)
     {
         let loss = (initial - current) * quantity;
-        let lossPercentage = (loss/initial) * 100;
+        let lossPercentage = (loss/totalCostPrice) * 100;
         body.style.backgroundColor = '#FCA5A5';
         output.innerText = `your loss is Rs. ${loss} & loss% is ${lossPercentage.toFixed(2)}%`;
     }
