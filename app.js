@@ -10,7 +10,7 @@ function getInputValues() {
     let quantity = Number(stocksQuantity.value);
     let current = Number(currentPrice.value);
 
-    if (initial && quantity && current)
+    if (initial >=0 && quantity>=1 && current >=0)
     {
         calculateProfitandLoss(initial, quantity, current);
     }
